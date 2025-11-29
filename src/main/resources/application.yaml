@@ -1,3 +1,10 @@
 spring:
   application:
     name: research
+springdoc:
+  swagger-ui:
+    path: /docs/swagger-ui.html
+    enabled: true
+  api-docs:
+    enabled: true
+    basePath: /api
