@@ -3,6 +3,9 @@ spring:
     name: research
   webflux:
     base-path: /research
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/literature
 springdoc:
   swagger-ui:
     path: /docs/swagger-ui.html
