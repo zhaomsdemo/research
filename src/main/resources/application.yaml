@@ -6,6 +6,9 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/literature
+  ai:
+    openai:
+      api-key: {OPENAI_API_KEY}
 springdoc:
   swagger-ui:
     path: /docs/swagger-ui.html
