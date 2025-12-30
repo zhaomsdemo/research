@@ -35,6 +35,12 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public Flux<Book> getAllBooks(int page, int size) {
+        Pageable pageable = Pageable.ofSize(size).withPage(page);
+        return bookRepository.findAllBooks(pageable);
+    }
+
+    @Override
     public Mono<Book> updateBook(String id, BookRequest bookDto) {
         return bookRepository.findById(id)
                 .map(existingBook -> {

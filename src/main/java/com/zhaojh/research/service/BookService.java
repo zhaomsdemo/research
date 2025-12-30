@@ -14,6 +14,8 @@ public interface BookService {
 
     Flux<Book> getAllBooks(Pageable pageable);
 
+    Flux<Book> getAllBooks(int page, int size);
+
     Mono<Book> updateBook(String id, BookRequest bookDto);
 
     Mono<Book> deleteBookById(String id);
